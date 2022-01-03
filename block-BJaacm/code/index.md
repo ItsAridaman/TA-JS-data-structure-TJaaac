@@ -16,20 +16,21 @@ let newUser = user;
 
 <!-- To add this image here use ![name](./hello.jpg) -->
 
+
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true,As both variables contain the same address.
+- `user === newUser;`//true,As both variables contain the same address.
+- `user.name === newUser.name;`//true, both will point to the value 'Arya', which is inside the address 1001.
+- `user.name == newUser.name;`////true, both will point to the value 'Arya', which is inside the address 1001.
+- `user.sibling == newUser.sibling;`//true, both will point to the value contained inside the sibling, which is at address 1001.
+- `user.sibling === newUser.sibling;`////true, both will point to the value contained inside the sibling, which is at address 1001.
+- `user.sibling == allBrothers;`//False, beacause 'allBrothers contain address inside whereas, the 'user.sibling' contains the string values rob,ryan and john.
+- `user.sibling === allBrothers;`//False, beacause 'allBrothers contain address inside whereas, the 'user.sibling' contains the string values rob,ryan and john.
+- `brothersCopy === allBrothers;`//False, the first one contains the string values, while the later one contains address 1002.
+- `brothersCopy == allBrothers;`//False, the first one contains the string values, while the later one contains address 1002.
+- `brothersCopy == user.sibling;`True, as both contains the string values representing values inside the sibling.
+- `brothersCopy === user.sibling;`True, as both contains the string values representing values inside the sibling.
+- `brothersCopy[0] === user.sibling[0];`True, both points to 'Rob'.
+- `brothersCopy[1] === user.sibling[1];`True, both points to  'Ryan'.
+- `user.sibling[1] === newUser.sibling[1];`True, both points to 'Ryan'.
