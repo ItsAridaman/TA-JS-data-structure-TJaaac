@@ -4,23 +4,75 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
 
-let sum=0;
-let sum1=0;
-for (let num of numbers)
+let collection=[];
+
+for(let num of numbers)
 {
-  sum+= num;
+  collection.push(num);
 }
-for (let num1 of userIds)
+for(let user of userIds)
 {
-  sum1+= num1;
+  collection.push(user);
 }
-
-
-
+console.log(collection);
 
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
 
+let evenCollection=[];
+
+for(let num of numbers)
+{
+  if(num%2===0)
+  {
+  evenCollection.push(num);
+  }
+  else
+  {
+
+  }
+}
+for(let user of userIds)
+{
+  if(user%2===0)
+  {
+  evenCollection.push(user);
+  }
+  else
+  {
+
+  }
+}
+console.log(evenCollection);
+
+
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+let oddCollection=[];
+
+for(let num of numbers)
+{
+  if(num%2!==0)
+  {
+  oddCollection.push(num);
+  }
+  else
+  {
+
+  }
+}
+for(let user of userIds)
+{
+  if(user%2!==0)
+  {
+  oddCollection.push(user);
+  }
+  else
+  {
+
+  }
+}
+console.log(oddCollection);
+
+
 
 /*
   @param means parameter
@@ -38,16 +90,28 @@ for (let num1 of userIds)
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+let paraArray=[];
+function times(para1, para2="test") {
+
+  if(para1<1)
+  {
+    return [];
+  }
+  let paraArray=[];
+
+for(let i=0;i<para1;i++)
+{
+  paraArray.push(para2);
+}
+console.log(paraArray);
 }
 
 // Uncomment the code below and test the output
 
-// console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
-// console.log(times(2, 'a')); // ['a', 'a']
-// console.log(times(0)); // []
-// console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
+console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
+console.log(times(2, 'a')); // ['a', 'a']
+console.log(times(0)); // []
+console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
 
 /*
 
@@ -62,8 +126,14 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(arr) {
+ 
+  let finalArray=[];
+  for (let k=arr.length-1;k>=0;k--)
+  {
+    finalArray.push(arr[k]);
+  }
+  return finalArray;
 }
 
 // Uncomment the code below and test the output
@@ -107,8 +177,14 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(arr) {
+  
+  let finalArray2={};
+  for (let l=0;l<arr.length;l++)
+  {
+    finalArray2[l]=arr[l];
+  }
+  return finalArray2;
 }
 
 // Uncomment the code below and test the output
