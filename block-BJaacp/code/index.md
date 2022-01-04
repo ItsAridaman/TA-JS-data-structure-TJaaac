@@ -11,7 +11,7 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`//undefined
+- `[10] === [10]`//false
 - What is the value of obj? // {surname:"stark"},initial value was changes with the next.
 - `obj == newObj`//false, both contains different adresses.
 - `obj === newObj`//false
